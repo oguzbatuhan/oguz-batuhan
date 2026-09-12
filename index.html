@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Oğuz Batuhan Çözeli - Software Developer ve Bilgisayar Programcılığı öğrencisi."
+    />
+    <link rel="icon" href="/img/ob-white-rounded.svg" />
+    <title>Oğuz Batuhan - Software Developer</title>
+  </head>
+  <body class="font-space">
+    <!-- HEADER / NAVIGATION -->
+
+    <header>
+      <nav
+        aria-label="navigation"
+        class="fixed top-0 left-0 w-full h-16 flex justify-center items-center bg-black-950 backdrop-blur text-orange-50 border-b border-orange-800 z-10"
+      >
+        <div
+          class="container w-11/12 md:w-10/12 lg:w-9/12 max-w-6xl flex justify-between items-center py-2"
+        >
+          <!-- Logo -->
+          <a href="#">
+            <img
+              src="/img/ob-white-none-bg.png"
+              class="h-12"
+              alt="Oğuz Batuhan"
+            />
+          </a>
+
+          <!-- Nav menu (mobile: toggled dropdown / desktop: inline links) -->
+          <div class="relative">
+            <button
+              id="menu-button"
+              aria-label="menu open"
+              type="button"
+              class="md:hidden flex items-center hover:bg-black-800 hover:text-orange-500 rounded-lg transition duration-150 ease-in cursor-pointer"
+            >
+              <span
+                class="icon-[basil--menu-solid] text-2xl flex items-center"
+              ></span>
+            </button>
+
+            <div
+              id="menu"
+              class="hidden md:flex flex-col md:flex-row md:items-center md:justify-center gap-2 md:gap-6 text-base fixed md:static z-10 top-16 right-4 w-36 md:w-auto p-2 md:p-0 bg-black-950 md:bg-transparent border border-l-orange-800 border-b-orange-800 border-r-orange-800 border-t-black-950 md:border-0 rounded-br-lg rounded-bl-lg md:rounded-none"
+            >
+              <a
+                href="#home"
+                class="hover:bg-black-800 hover:text-orange-500 rounded-lg py-0.5 px-1 transition duration-150 ease-in"
+                >Anasayfa</a
+              >
+              <a
+                href="#project"
+                class="hover:bg-black-800 hover:text-orange-500 rounded-lg py-0.5 px-1 transition duration-150 ease-in"
+                >Projeler</a
+              >
+              <a
+                href="#about"
+                class="hover:bg-black-800 hover:text-orange-500 rounded-lg py-0.5 px-1 transition duration-150 ease-in"
+                >Hakkımda</a
+              >
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main class="pt-16">
+      <!-- Home / hero section -->
+      <section
+        id="home"
+        class="scroll-mt-16 md:py-8 bg-black-900 text-black-50 border-b border-orange-800"
+      >
+        <div
+          class="container py-8 w-11/12 md:w-10/12 lg:w-9/12 max-w-6xl m-auto md:flex md:gap-20 md:items-center"
+        >
+          <!-- Intro text + social links -->
+          <div class="flex-1 my-8">
+            <span class="text-orange-500 text-sm">>_</span>
+            <h1 class="text-2xl">
+              Oğuz Batuhan Çözeli <span class="text-orange-500 text-sm">_</span>
+            </h1>
+            <span class="text-xs">Software Developer</span>
+            <p class="py-4 max-w-2xl">
+              Merhaba! Ben Oğuz Batuhan<br />
+              Teknolojiye, uzaya ve keşfetmeye tutkulu bir bilgisayar
+              programcılığı öğrencisiyim
+            </p>
+            <span class="text-orange-500 text-sm">Sosyal medya hesaplarım</span>
+            <div class="py-4 flex gap-6">
+              <a
+                href="https://github.com/oguzbatuhan"
+                target="_blank"
+                class="icon-[akar-icons--github-fill] text-xl hover:text-orange-500 transition duration-150 ease-in"
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/oguzbatuhanczl/"
+                target="_blank"
+                class="icon-[akar-icons--linkedin-fill] text-xl hover:text-orange-500 transition duration-150 ease-in"
+              ></a>
+              <a
+                href="https://x.com/oguzbatuhan_czl"
+                target="_blank"
+                class="icon-[akar-icons--x-fill] text-xl hover:text-orange-500 transition duration-150 ease-in"
+              ></a>
+              <a
+                href="https://www.instagram.com/oguzbatuhanczl/"
+                target="_blank"
+                class="icon-[akar-icons--instagram-fill] text-xl hover:text-orange-500 transition duration-150 ease-in"
+              ></a>
+              <a
+                href="https://www.youtube.com/@oguzbatuhan_czl"
+                target="_blank"
+                class="icon-[akar-icons--youtube-fill] text-xl hover:text-orange-500 transition duration-150 ease-in"
+              ></a>
+            </div>
+          </div>
+
+          <!-- Interactive terminal widget -->
+          <div
+            class="flex-1 w-full min-w-52 my-8 flex items-center justify-center"
+          >
+            <div
+              class="w-full h-72 bg-black-950 rounded-lg border border-orange-800 overflow-hidden"
+            >
+              <!-- Terminal titlebar -->
+              <div class="bg-black-900 rounded-t-lg p-2 flex gap-2">
+                <div
+                  class="text-sm flex gap-1 items-center justify-start cursor-pointer"
+                >
+                  <span
+                    class="icon-[ant-design--close-circle-filled] text-red-500"
+                  ></span>
+                  <span
+                    class="icon-[akar-icons--circle-minus-fill] text-yellow-500"
+                  >
+                  </span>
+                  <span
+                    class="icon-[streamline-flex--full-screen-osx-solid] text-green-500"
+                  ></span>
+                </div>
+                <div class="text-xs flex gap-1 items-center justify-start">
+                  <span
+                    class="icon-[ant-design--folder-open-filled] text-blue-500"
+                  ></span>
+                  <span class="text-black-500">ob@terminal ~ %</span>
+                </div>
+              </div>
+
+              <!-- Terminal body: output log + input line -->
+              <div
+                id="terminal-output"
+                class="p-3 text-xs font-mono h-[calc(100%-40px)] min-w-0 overflow-y-auto scrollbar-thumb-black-500"
+              >
+                <div id="terminal-messages" class="wrap-break-word">
+                  <p>Welcome to my terminal!</p>
+                  <p>
+                    Type <span class="text-orange-500">help</span> and press
+                    Enter.
+                  </p>
+                </div>
+
+                <div class="flex items-start">
+                  <span class="mr-1 whitespace-nowrap">ob@terminal ~ %</span>
+                  <input
+                    id="terminal-input"
+                    type="text"
+                    class="bg-transparent outline-none p-0 m-0 flex-1 min-w-0"
+                    autocomplete="off"
+                    autofocus
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects section -->
+      <section
+        id="project"
+        class="scroll-mt-16 md:py-8 bg-black-950 text-black-50 border-b border-orange-800"
+      >
+        <div
+          class="container py-8 w-11/12 md:w-10/12 lg:w-9/12 max-w-6xl m-auto font-space md:flex md:gap-20 md:items-center"
+        >
+          <div
+            class="md:flex-1 p-4 my-8 border border-orange-800 rounded-lg bg-black-900 shadow-xl/30 shadow-orange-800"
+          >
+            <!-- Project title -->
+            <h2 class="text-xl text-black-100">Kişisel Web Sayfam</h2>
+
+            <!-- Description -->
+            <p class="pt-2 text-sm text-black-300">
+              Kişisel bilgilerimi, projelerimi ve kullandığım teknolojileri
+              sergilediğim kişisel web sitem.
+            </p>
+
+            <!-- Technologies -->
+            <div class="py-2 flex gap-2">
+              <span class="text-xs text-orange-500">HTML</span>
+              <span class="text-xs text-orange-500">CSS</span>
+              <span class="text-xs text-orange-500">JavaScript</span>
+              <span class="text-xs text-orange-500">Tailwind CSS</span>
+            </div>
+
+            <!-- Footer -->
+            <div class="flex justify-between items-center mt-4">
+              <span class="text-sm text-orange-50/50">Sep 2026</span>
+
+              <div class="flex gap-4">
+                <a
+                  href="https://github.com/oguzbatuhan/oguzbatuhan.github.io"
+                  target="_blank"
+                  class="flex flex-wrap items-center justify-center hover:text-orange-500 transition duration-150 ease-in"
+                >
+                  <i class="icon-[boxicons--git-repo-forked] text-2xl"></i> Repo
+                </a>
+                <a
+                  href="https://oguzbatuhan.github.io"
+                  target="_blank"
+                  class="flex flex-wrap items-center justify-center hover:text-orange-500 transition duration-150 ease-in"
+                >
+                  <i class="icon-[fluent--live-24-filled] text-2xl"></i> Live
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="md:flex-1 p-4 my-8 border border-orange-800 rounded-lg bg-black-900 shadow-xl/30 shadow-orange-800"
+          >
+            <!-- Project title -->
+            <h2 class="text-xl text-black-100">Jessica Watson</h2>
+
+            <!-- Description -->
+            <p class="pt-2 text-sm text-black-300">
+              Bu projemde Jessica Watsona ait olan kişisel web sayfasının
+              kopyasını yapmayı amaçladım.
+            </p>
+
+            <!-- Technologies -->
+            <div class="py-2 flex gap-2">
+              <span class="text-xs text-orange-500">HTML</span>
+              <span class="text-xs text-orange-500">CSS</span>
+              <span class="text-xs text-orange-500">JavaScript</span>
+            </div>
+
+            <!-- Footer -->
+            <div class="flex justify-between items-center mt-4">
+              <span class="text-sm text-orange-50/50">Jun 2026</span>
+
+              <div class="flex gap-4">
+                <a
+                  href="https://github.com/oguzbatuhan/Jessica-Watson"
+                  target="_blank"
+                  class="flex flex-wrap items-center justify-center hover:text-orange-500 transition duration-150 ease-in"
+                >
+                  <i class="icon-[boxicons--git-repo-forked] text-2xl"></i> Repo
+                </a>
+                <a
+                  href="https://oguzbatuhan.github.io/Jessica-Watson"
+                  target="_blank"
+                  class="flex flex-wrap items-center justify-center hover:text-orange-500 transition duration-150 ease-in"
+                >
+                  <i class="icon-[fluent--live-24-filled] text-2xl"></i> Live
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About section -->
+      <section
+        id="about"
+        class="scroll-mt-16 md:py-8 bg-black-900 text-black-50 border-b border-orange-800"
+      >
+        <div
+          class="container py-8 w-11/12 md:w-10/12 lg:w-9/12 max-w-6xl m-auto font-space md:flex md:gap-20 md:items-center"
+        >
+          <article class="py-8 w-full">
+            <img
+              src="/img/my-foto-2.jpg"
+              class="md:float-start max-w-96 w-full rounded-lg md:me-8 md:mb-2 mb-8 border border-orange-800 max-md:mx-auto"
+              alt="Oğuz Batuham İmg"
+            />
+            <div class="text-black-100">
+              <h2 class="text-xl pb-4">Hakkımda</h2>
+              <p class="pb-4">
+                Anadolu Üniversitesi'nde Bilgisayar Programcılığı öğrencisiyim.
+                Programlamaya olan ilgim ve teknolojiye duyduğum merak, bu
+                alanda ilerlememi sağlayan en önemli motivasyonlardan biri.
+                Başlangıçta Elektronik Teknolojisi bölümünü kazanmış olsam da
+                zamanla ilgimin daha çok yazılım ve programlama tarafında
+                olduğunu fark ederek Bilgisayar Programcılığı bölümüne yöneldim.
+              </p>
+              <p class="pb-4">
+                Programlama benim için yalnızca bir bölüm veya meslek değil,
+                sürekli öğrenebildiğim ve kendimi geliştirebildiğim bir alan.
+                Yeni teknolojiler öğrenmeye, farklı projeler geliştirmeye ve
+                öğrendiklerimi uygulamaya devam ediyorum. Özellikle GitHub
+                profilimi aktif tutmaya ve üzerinde düzenli olarak çalışmalarımı
+                paylaşmaya önem veriyorum.
+              </p>
+              <p class="pb-4">
+                Programlamanın yanında spor ve açık hava aktiviteleri de
+                hayatımda önemli bir yere sahip. Koşu, tekerlekli paten, kaya
+                tırmanışı, mağaracılık, okçuluk ve doğa yürüyüşü gibi birçok
+                farklı aktiviteyle ilgileniyorum. Özellikle koşuya aktif olarak
+                devam ediyorum ve 2024 ve 2025 yıllarında Runtalya 10K
+                koşularına katıldım.
+              </p>
+              <p class="pb-4">
+                Yeni şeyler öğrenmek, üretmek ve kendimi farklı alanlarda
+                geliştirmek benim için önemli. Hem programlama alanında
+                ilerlemeye hem de aktif bir yaşam sürdürmeye devam ediyorum.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="md:py-8 bg-black-950 text-black-50">
+      <div class="container py-4 w-11/12 md:w-10/12 lg:w-9/12 max-w-6xl m-auto">
+        <div class="flex items-center justify-between py-2">
+          <a href="#">
+            <img
+              src="/img/ob-white-none-bg.png"
+              class="h-12 md:h-28 lg:h-36"
+              alt="Oğuz Batuhan"
+            />
+          </a>
+          <div class="py-4 flex gap-6">
+            <a
+              href="https://github.com/oguzbatuhan"
+              target="_blank"
+              class="icon-[akar-icons--github-fill] text-xl md:text-2xl lg:text-4xl hover:text-orange-500 transition duration-150 ease-in"
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/oguzbatuhanczl/"
+              target="_blank"
+              class="icon-[akar-icons--linkedin-fill] text-xl md:text-2xl lg:text-4xl hover:text-orange-500 transition duration-150 ease-in"
+            ></a>
+            <a
+              href="https://x.com/oguzbatuhan_czl"
+              target="_blank"
+              class="icon-[akar-icons--x-fill] text-xl md:text-2xl lg:text-4xl hover:text-orange-500 transition duration-150 ease-in"
+            ></a>
+            <a
+              href="https://www.instagram.com/oguzbatuhanczl/"
+              target="_blank"
+              class="icon-[akar-icons--instagram-fill] text-xl md:text-2xl lg:text-4xl hover:text-orange-500 transition duration-150 ease-in"
+            ></a>
+            <a
+              href="https://www.youtube.com/@oguzbatuhan_czl"
+              target="_blank"
+              class="icon-[akar-icons--youtube-fill] text-xl md:text-2xl lg:text-4xl hover:text-orange-500 transition duration-150 ease-in"
+            ></a>
+          </div>
+        </div>
+        <p class="block text-center text-black-500 text-sm py-2">
+          &copy; 2026 Oğuz Batuhan
+        </p>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
