@@ -44,7 +44,7 @@ const navLinks = document.querySelectorAll("nav a[href^='#']");
 function setActiveLink(sectionId) {
   navLinks.forEach((link) => {
     const isActive = link.getAttribute("href") === `#${sectionId}`;
-    link.classList.toggle("text-orange-500", isActive);
+    link.classList.toggle("text-primary-500", isActive);
   });
 }
 
@@ -71,85 +71,62 @@ const terminalInput = document.querySelector("#terminal-input");
 const terminalMessages = document.querySelector("#terminal-messages");
 const terminalOutput = document.querySelector("#terminal-output");
 
+const sakalar = [
+  "Bir div'i dikey ortalamak için gereken süre: 3 saniye Google, 45 dakika Stack Overflow, 1 ömür boyu iç huzursuzluk.",
+  "Commit geçmişim bir gerilim romanı gibi:<br>  'düzeltildi'<br>  'gerçekten düzeltildi'<br>  'yemin ederim bu sefer düzeldi'<br>  'geri aldım'",
+  "Programcılar neden karanlık modu sever? Çünkü ışık böcek çeker.",
+  "Evrendeki en ağır cisim kara delik değil, node_modules klasörü. Işık bile içinden çıkamıyor, ben nasıl çıkayım?",
+  "Masamdaki lastik ördeğe derdimi anlattım, çözdüm. Terfiyi o aldı.",
+  "CSS'te bir şeyi ortalamak için 3 yöntem bilirsin. Hepsi de çalışmaz.",
+  "Bugün kod yazdım. Yarın da düzelteceğim.",
+  "Stack Overflow kapanırsa programcıların %80'i işsiz kalır.",
+  "Kodum çalışıyor... Neden çalıştığını bilmiyorum ama çalışıyor.",
+  "Bir programcının en büyük korkusu: 'Bu kodu kim yazmış?' diye sorup kendi commit'ini görmek.",
+  "Frontend: 'Backend hazır mı?' Backend: 'Hâlâ düşünüyorum.'",
+  "Git'te force push yaptım. Takım arkadaşlarım hâlâ beni arıyor.",
+  "Kod review'da 'LGTM' yazmak, 'Bakmadım ama umarım çalışıyordur' demektir.",
+  "Bir bug buldum. Düzelttim. 3 tane yeni bug çıktı. Normal.",
+  "JavaScript'te == ile === arasındaki farkı açıklamak, birine neden solak olduğunu anlatmak gibidir.",
+  "Production'da çalışan kod ile local'de çalışan kod asla aynı kişi değildir.",
+  "Toplantı: 'Bu iş 2 saatte biter.' Gerçek: 2 gün + 4 kahve + 1 sinir krizi.",
+  "Kod yazarken en çok kullanılan kısayol: Ctrl + Z",
+  "Bir junior: 'Neden çalışmıyor?' Bir senior: 'Neden çalışıyor?'",
+  "node_modules silip yeniden yüklemek, modern çağın abdesti gibidir.",
+];
+
+let kullanilanSakalar = [];
+
 const commands = {
-  help: `<br>-----------><br> Available commands: history, joke, bug, debug, coffee, fortune, sudo, sleep, deploy, exit, clear`,
+  saka: () => {
+    // Tüm şakalar bittiyse listeyi sıfırla
+    if (kullanilanSakalar.length === sakalar.length) {
+      kullanilanSakalar = [];
+    }
 
-  history: `<br>-----------><br>
-1843  Ada Lovelace → İlk algoritma.<br>
-1972  C → Sistem programlamasının temeli.<br>
-1989  Web → İnternet dünyaya açıldı.<br>
-1995  JavaScript → Web etkileşim kazandı.<br>
-2009  Python 3 → Okunabilir kod.<br>
-2026  Biz → Hâlâ bug arıyoruz.
-`,
+    // Henüz kullanılmamış şakaları filtrele
+    const kalanSakalar = sakalar.filter(
+      (saka) => !kullanilanSakalar.includes(saka),
+    );
 
-  joke: `<br>-----------><br>
-Kod neden çalışmıyor?<br>
-Çünkü çalışmak istemiyor.
-`,
+    // Kalanlardan rastgele birini seç
+    const secilen =
+      kalanSakalar[Math.floor(Math.random() * kalanSakalar.length)];
 
-  bug: `<br>-----------><br>
-Bug bulundu.<br>
-...
-<br>
-Bug, beni buldu.
-`,
+    // Seçileni hafızaya ekle
+    kullanilanSakalar.push(secilen);
 
-  debug: `<br>-----------><br>
-Hata aranıyor...<br>
-Hata bulundu.<br>
-Kodda değil, bende.
-`,
-
-  coffee: `<br>-----------><br>
-☕ Kahve yükleniyor...
-<br>
-Tamam. Şimdi çalışabiliriz.
-`,
-
-  fortune: `<br>-----------><br>
-Bugün kodun çalışacak.
-<br>
-Neden?<br>
-Bilmiyorum.
-`,
-
-  sudo: `<br>-----------><br>
-[sudo] password for ob:
-<br>
-Şifre değil,<br>
-sabır gerekiyor.
-`,
-
-  sleep: `<br>-----------><br>
-Uyku başlatılıyor...
-<br>
-"Şu kodu da düzelteyim."
-`,
-
-  deploy: `<br>-----------><br>
-Build ✓<br>
-Tests ✓<br>
-Deploy ✓<br>
-<br>
-Şimdi dua et.
-`,
-
-  exit: `<br>-----------><br>
-Çıkış yapılamıyor.
-<br>
-Daha siteyi gezmedin. :)
-`,
+    return `<span class="text-primary-500">${secilen}</span>`;
+  },
+  help: () =>
+    "Komutlar: <span class='text-primary-500'>saka</span>, <span class='text-primary-500'>help</span>, <span class='text-primary-500'>clear</span>",
 };
 
-// Ekrana yeni bir satır ekleyen yardımcı fonksiyon
 function printLine(text) {
   const line = document.createElement("p");
   line.innerHTML = text;
   terminalMessages.appendChild(line);
 }
 
-// Terminali en alta kaydıran yardımcı fonksiyon
 function scrollToBottom() {
   terminalOutput.scrollTop = terminalOutput.scrollHeight;
 }
@@ -171,9 +148,16 @@ terminalInput.addEventListener("keydown", (event) => {
   }
 
   // Komut tanınıyorsa cevabını, tanınmıyorsa hata mesajını yazdır
-  const response = commands[command] ?? `Command not found: ${command}`;
+  const handler = commands[command];
+  const response =
+    typeof handler === "function" ? handler() : `Command not found: ${command}`;
+
   printLine(response);
 
   terminalInput.value = "";
   scrollToBottom();
+});
+
+document.getElementById("terminal-output").addEventListener("click", () => {
+  document.getElementById("terminal-input").focus();
 });

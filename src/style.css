@@ -3,18 +3,19 @@
 
 /* theme color */
 @theme {
-  /* orange */
-  --color-orange-50: #fff6e5;
-  --color-orange-100: #ffedcc;
-  --color-orange-200: #ffdb99;
-  --color-orange-300: #ffc966;
-  --color-orange-400: #ffb833;
-  --color-orange-500: #ffa600;
-  --color-orange-600: #cc8500;
-  --color-orange-700: #996300;
-  --color-orange-800: #664200;
-  --color-orange-900: #332100;
-  --color-orange-950: #241700;
+  /* primary */
+  --color-primary-50: #ecf5f8;
+  --color-primary-100: #d9eaf2;
+  --color-primary-200: #b4d6e4;
+  --color-primary-300: #8ec1d7;
+  --color-primary-400: #68adca;
+  --color-primary-500: #4298bd;
+  --color-primary-600: #357a97;
+  --color-primary-700: #285b71;
+  --color-primary-800: #1b3d4b;
+  --color-primary-900: #0d1e26;
+  --color-primary-950: #09151a;
+
   /* black */
   --color-black-50: #f2f2f2;
   --color-black-100: #e6e6e6;
