@@ -6,7 +6,7 @@ uygulamaya dökmek amacıyla sıfırdan yazıyorum.
 
 ## ✨ Özellikler
 
-- Karanlık tema, turuncu-siyah renk paleti (Tailwind `@theme` ile özelleştirildi)
+- Karanlık tema (Tailwind `@theme` ile özelleştirildi)
 - Responsive tasarım (mobilde açılır menü, masaüstünde yatay nav)
 - Scroll sırasında aktif section'a göre nav linkini otomatik vurgulama
   (`IntersectionObserver` ile)

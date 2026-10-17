@@ -44,7 +44,7 @@ const navLinks = document.querySelectorAll("nav a[href^='#']");
 function setActiveLink(sectionId) {
   navLinks.forEach((link) => {
     const isActive = link.getAttribute("href") === `#${sectionId}`;
-    link.classList.toggle("text-primary-500", isActive);
+    link.classList.toggle("bg-fg/5", isActive);
   });
 }
 
@@ -115,10 +115,10 @@ const commands = {
     // Seçileni hafızaya ekle
     kullanilanSakalar.push(secilen);
 
-    return `<span class="text-primary-500">${secilen}</span>`;
+    return `<span class="text-accent">${secilen}</span>`;
   },
   help: () =>
-    "Komutlar: <span class='text-primary-500'>saka</span>, <span class='text-primary-500'>help</span>, <span class='text-primary-500'>clear</span>",
+    "Commands: <span class='text-accent'>saka</span>, <span class='text-accent'>help</span>, <span class='text-accent'>clear</span>",
 };
 
 function printLine(text) {

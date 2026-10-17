@@ -1,39 +1,27 @@
 @import "tailwindcss";
 @plugin "@iconify/tailwind4";
 
-/* theme color */
-@theme {
-  /* primary */
-  --color-primary-50: #ecf5f8;
-  --color-primary-100: #d9eaf2;
-  --color-primary-200: #b4d6e4;
-  --color-primary-300: #8ec1d7;
-  --color-primary-400: #68adca;
-  --color-primary-500: #4298bd;
-  --color-primary-600: #357a97;
-  --color-primary-700: #285b71;
-  --color-primary-800: #1b3d4b;
-  --color-primary-900: #0d1e26;
-  --color-primary-950: #09151a;
-
-  /* black */
-  --color-black-50: #f2f2f2;
-  --color-black-100: #e6e6e6;
-  --color-black-200: #cccccc;
-  --color-black-300: #b3b3b3;
-  --color-black-400: #999999;
-  --color-black-500: #808080;
-  --color-black-600: #666666;
-  --color-black-700: #4d4d4d;
-  --color-black-800: #333333;
-  --color-black-900: #1a1a1a;
-  --color-black-950: #121212;
-  /* fonts */
-  --font-space: "Space Grotesk", sans-serif;
-  --font-jetbrains: "JetBrains Mono", monospace;
+:root {
+  --page: #111111;
+  --surface: #1a1a1a;
+  --fg: #ecf5f8;
+  --muted: #808080;
+  --accent: #4298bd;
+  --line: #262b2e;
 }
 
-/* fonts */
+@theme {
+  --color-page: var(--page);
+  --color-surface: var(--surface);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-line: var(--line);
+
+  --font-jetbrains: "JetBrains Mono", monospace;
+  --font-space: "Space Grotesk", sans-serif;
+}
+
 @font-face {
   font-family: "Space Grotesk";
   src: url("/fonts/Space_Grotesk/SpaceGrotesk-VariableFont_wght.ttf")
@@ -41,7 +29,6 @@
   font-weight: 100 900;
   font-style: normal;
 }
-
 @font-face {
   font-family: "JetBrains Mono";
   src: url("/fonts/JetBrains_Mono/JetBrainsMono-VariableFont_wght.ttf")
