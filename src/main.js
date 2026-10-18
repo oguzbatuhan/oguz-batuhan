@@ -161,3 +161,12 @@ terminalInput.addEventListener("keydown", (event) => {
 document.getElementById("terminal-output").addEventListener("click", () => {
   document.getElementById("terminal-input").focus();
 });
+
+// PWA: service worker kaydı (Chrome'da "Uygulamayı yükle" için)
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker
+      .register(`${import.meta.env.BASE_URL}sw.js`)
+      .catch((err) => console.error("Service worker kaydedilemedi:", err));
+  });
+}
